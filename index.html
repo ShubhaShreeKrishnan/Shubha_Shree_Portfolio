@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shubha Shree G.N | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(120deg, #f0f4f8, #dceeff);
+      color: #2b2b2b;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(-45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+      background-size: 400% 400%;
+      color: white;
+      animation: gradientShift 10s ease infinite, zoomIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      animation: fadeSlideDown 1s ease;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeSlideUp 1.2s ease;
+    }
+
+    section {
+      max-width: 900px;
+      background: white;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section:nth-of-type(odd) {
+      animation-delay: 0.3s;
+    }
+
+    section:nth-of-type(even) {
+      animation-delay: 0.6s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2196f3;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: #2196f3;
+      display: block;
+      margin-top: 6px;
+      border-radius: 3px;
+    }
+
+    h3 {
+      margin-top: 1.2rem;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0d47a1;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      padding: 12px 24px;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      transform: scale(1.08);
+      background: linear-gradient(to right, #56ab2f, #a8e063);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2196f3;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      animation: fadeInUp 1s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shubha Shree G.N</h1>
+    <p>Aspiring Backend Developer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Final year student passionate about data analytics, machine learning, and software development. Eager to contribute to real-world projects and expand professional experience.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>C Programming</li>
+      <li>Java</li>
+      <li>SQL</li>
+      <li>FastAPI</li>
+      <li>Machine Learning</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Projects</h2>
+    <h3>Email Spam Detection using ML</h3>
+    <p>Built a machine learning model using natural language processing to classify emails as spam or not.</p>
+
+    <h3>Surveillance for Threat Detection using YOLO</h3>
+    <p>Developed a real-time threat detection system using YOLO and the DDCSASS dataset to identify threats in CCTV footage.</p>
+  </section>
+
+  <section>
+    <h2>Internship</h2>
+    <p>Completed internship at Prodigy Infotech in Machine Learning.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Programming in Java - NPTEL</li>
+      <li>Diploma in C & OOPs - CSC</li>
+      <li>Big Data Engineering - Nunnari Labs</li>
+      <li>Communication Training - Infosys</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Portfolio & Contact</h2>
+    <div class="button-group">
+      <a href="https://github.com/ShubhaShreeKrishnan" target="_blank" class="button">🌐 GitHub</a>
+      <a href="https://linkedin.com/in/shubha-krishnan-9484102a7" target="_blank" class="button">💼 LinkedIn</a>
+      <a href="mailto:shubhashreegn@gmail.com" class="button">📧 Email</a>
+      <a href="tel:+916375080705" class="button">📞 Call Me</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed by Shubha Shree G.N</p>
+  </footer>
+
+</body>
+</html>
